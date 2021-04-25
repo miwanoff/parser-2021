@@ -65,8 +65,8 @@ fwrite($p, "<h1>Кинотеатры</h1>");
 
 for ($i = 1; $i < count($cinemas); $i++) {
     fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a></h3>");
-    fwrite($p, "<p>$description[$i]</p>");
-    fwrite($p, "<img src=\"\">");
+    fwrite($p, "\n<p>$description[$i]</p>");
+    fwrite($p, "\n<img src=\"\">");
 }
 
 fwrite($p, $str_e);
