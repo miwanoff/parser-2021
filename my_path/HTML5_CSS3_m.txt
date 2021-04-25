@@ -1,0 +1,216 @@
+﻿Тест HTML5_CSS3_m
+
+1) Какие стили позволяют замедлить изменение ширины объекта на 4 секунды?
+
+transition: width 4s;
+transition-property: width; transition-duration: 4s;
+transition-timing-function: width 4s;
+transition: all 4s;
+transition-delay: 4s;
+
+
+2) Какой псевдоэлемент позволяет добавить контент до или после указанного тега?
+
+:first
+:first-line
+:after
+:before
+:first-child
+
+
+3) Отметьте свойства строчно-блочных элементов:
+
+Внутрь строчно-блочных элементов допустимо помещать текст, строчные или блочные элементы
+Внутрь строчно-блочных элементов не разрешается помещать блочные элементы
+Несколько элементов, идущих подряд, располагаются на одной строке и переносятся на другую строку при необходимости
+Несколько элементов, идущих подряд, располагаются на разных строчках 
+Для строчно-блочных элементов не разрешается задавать ширину и высоту
+
+
+4) Какие стилевые свойства позволят отобразить два фоновых изображения?
+
+background: #ff0 url(images/im1.png) no-repeat, url(images/im2.png) repeat-x 95% 0;
+background: url(images/im1.png) no-repeat, url(images/im2.png);
+background: url(images/im1.png), url(images/im2.png); background-repeat:repeat,no-repeat;
+background: url(images/im1.png), url(images/im2.png); background-repeat:no-repeat,repeat;
+background: url(images/Lasvegas.jpg), url(images/sprites.png); 
+
+
+5) Какой стиль позволяет задать градиентный переход цвета слева направо от белого цвета к черному через зеленый цвет?
+
+background:linear-gradient(90deg, #FFFFFF 0%, #008000 50%, #000000 100%);
+background:linear-gradient(#FFFFFF 0%, #008000 50%, #000000 100%);;
+background:linear-gradient(270deg, #FFFFFF 0%, #008000 50%, #000000 100%);
+background:linear-gradient(to right, #FFFFFF 0%, #008000 50%, #000000 100%);
+background:linear-gradient(to left, #FFFFFF 0%, #008000 50%, #000000 100%); 
+
+
+6) Какой атрибут позволяет  задать в поле ввода значение-подсказку для тега input[type="text"] ?
+
+autofocus
+pattern
+autocomplete
+placeholder
+value
+
+
+7) Какой шаблон подходит для семизначного телефонного номера?
+
+<input type='tel' pattern='[0-9]{2}[0-9]{2}[0-9]{3}'/> 
+<input type='tel' pattern='8[0-9]{3}[0-9]{3}'/> 
+<input name='tel' type='file' pattern='[0-9]{2,3}-?[0-9]{2}-?[0-9]{2}/>
+<input type='tel' pattern='8[0-9]{6}'/> 
+<input type='tel' pattern='[0-7]'/> 
+
+
+8) Как создать "градусник" (индикатор выполнения) для отображения процентов от выполнения?
+
+<input type="switch">
+<input type="range">
+<input type="select">
+<input type="progress">
+<input type="slider">
+
+
+9) Какой атрибут позволяет  задать шаблон (регулярное выражение) для ввода текста пользователем?
+
+pattern
+multiple
+autocomplete
+placeholder
+value
+
+
+10) Какой тег в HTML5 задает блок сайта для дополнительной информации?
+
+<header>
+<aside>
+<nav>
+<article>
+<section>
+
+
+11) Какой тег в HTML5 является строчным?
+
+<header>
+<footer>
+<nav>
+<mark> 
+<section>
+
+
+12) Какие из псевдо-селекторов позволяют создавать дополнительный текст до или после существующего элемента?
+
+:after 
+:last-child
+:before
+:first-line
+:first-child
+
+
+13) С помощью какого стиля разместить фон так, чтобы он покрывал весь экран?
+
+background-size:100%;
+background-size:100px;
+background-size:сover;
+background-size:сontain;
+background-size:bottom right top left;
+
+
+14) Какие из стилей сделают слой прозрачным?
+
+opacity:0;
+opacity:1;
+display:transparent;
+background: rgba(0, 0, 0, 0);
+background: rgb(0, 0, 0);
+
+
+15) Свойство, определяющее положение зрителя относительно сцены (центральное, взгляд сверху):
+
+perspective-origin: center top;
+perspective-origin: 50% 100%;
+perspective-origin: center bottom;
+perspective-origin: 50% 0%;
+perspective-origin: 100% 50%;
+
+
+16) Укажите стиль, позволяющий задать квадрат с двумя закругленными верхними углами: 
+
+border-radius: 8px;
+border-radius: 8px 8px 0 0;
+border-top-left-radius: 8px; border-top-right-radius: 8px;
+border-radius: 0 8px 8px 0;
+border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+
+
+17) Какие из псевдо-селекторов позволяют задать стиль в зависимости от правильного или неправильного заполнения элемента формы?
+
+:target
+:focus
+:valid
+:invalid
+:checked
+
+
+18) Какие из псевдо-селекторов позволяют задать стиль для элемента, не прошедшего проверку на правильность, на который установлен курсор?
+
+input:focus:invalid
+input:focus:valid
+input:valid
+input:focus
+input:invalid
+
+
+19) Сделать элемент невидимым можно с помощью:
+
+свойства display
+свойства visibility
+свойства inline
+свойства overflow
+свойства opacity
+
+
+20) Какие теги в HTML5 позволяют оформить изображение?
+
+<figure>
+<figcaption>
+<time>
+<aside>
+<mark>
+
+
+21) Какой атрибут задает предварительную подгрузку видео или аудио контента?
+
+autoplay 
+controls 
+loop
+preload
+poster
+
+
+22)Какой псевдокласс позволяет задать первый дочерний элемент родителя? 
+
+:first-child 
+:nth-child(1)
+:nth-child(2n)
+:only-child
+:last-child
+
+
+23)С помощью какого правила можно сделать дизайн сайта адаптивным?
+
+@media  
+@page 
+@import
+@charset
+@font-face 
+
+
+24)С помощью какого правила можно загружать шрифт непосредственно из интернет? 
+
+@media  
+@page 
+@import
+@charset
+@font-face 
