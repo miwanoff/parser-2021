@@ -4,6 +4,7 @@ require 'simplehtmldom/simple_html_dom.php';
 $cinemas = [];
 $cinemas_title = [];
 $images = [];
+$address = [];
 $cinem = file_get_html("https://mykharkov.info/catalog/kinoteatry/");
 //print_r($cinemas);
 echo count($cinem->find('.title a'));
@@ -65,8 +66,9 @@ fwrite($p, "<h1>Кинотеатры</h1>");
 
 for ($i = 1; $i < count($cinemas); $i++) {
     fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a></h3>");
-    fwrite($p, "\n<p>$description[$i]</p>");
+
     fwrite($p, "\n<img src=\"\">");
+
 }
 
 fwrite($p, $str_e);
