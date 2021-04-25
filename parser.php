@@ -23,7 +23,7 @@ foreach ($cinemas as $cinema) {
     //echo count($data->find('.news-datails-text p'));
     if (count($data->find('.news-datails-text p')) > 0) {
         $temp = $data->find('.news-datails-text p', 0)->innertext;
-        $description[] = $temp;
+        $description[] = preg_replace('/<img\s+[^>]*src="([^"]*)"[^>]*>/', '', $temp);
 
     }
 
@@ -56,7 +56,8 @@ fwrite($p, "\n");
 fwrite($p, "<h1>Кинотеатры</h1>");
 
 for ($i = 1; $i < count($cinemas); $i++) {
-    fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a>");
+    fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a></h3>");
+    fwrite($p, "<p>$description[$i]</p>");
 }
 
 fwrite($p, $str_e);
