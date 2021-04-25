@@ -30,3 +30,34 @@ foreach ($cinemas as $cinema) {
 }
 
 print_r($description);
+
+$str_b = '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>';
+
+$str_e = '</body>
+</html>';
+
+$name = "my_path";
+if (!is_dir($name)) {
+    mkdir($name); // создание каталога по указанному пути
+    echo realpath($name); // реальный путь к созданному каталогу
+}
+
+$p = fopen("$name/cinemas.html", "w");
+fwrite($p, $str_b);
+fwrite($p, "\n");
+fwrite($p, "<h1>Кинотеатры</h1>");
+
+for ($i = 1; $i < count($cinemas); $i++) {
+    fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a>");
+}
+
+fwrite($p, $str_e);
+fclose($p);
