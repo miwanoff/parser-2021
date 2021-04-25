@@ -3,6 +3,7 @@ header("Content-Type: text/html; charset=utf-8");
 require 'simplehtmldom/simple_html_dom.php';
 $cinemas = [];
 $cinemas_title = [];
+$images = [];
 $cinem = file_get_html("https://mykharkov.info/catalog/kinoteatry/");
 //print_r($cinemas);
 echo count($cinem->find('.title a'));
@@ -13,8 +14,15 @@ if (count($cinem->find('.title a')) > 0) {
     }
 }
 
+if (count($cinem->find('.image img')) > 0) {
+    foreach ($cinem->find('.image img') as $img) {
+        $images[] = $img->getAttribute('data-src');
+    }
+}
+
 print_r($cinemas);
 print_r($cinemas_title);
+print_r($images);
 
 $description = [];
 foreach ($cinemas as $cinema) {
@@ -58,6 +66,7 @@ fwrite($p, "<h1>Кинотеатры</h1>");
 for ($i = 1; $i < count($cinemas); $i++) {
     fwrite($p, "\n<h3><a href=\"$cinemas[$i]\"> $cinemas_title[$i]</a></h3>");
     fwrite($p, "<p>$description[$i]</p>");
+    fwrite($p, "<img src=\"\">");
 }
 
 fwrite($p, $str_e);
